@@ -8,15 +8,15 @@ import {
   ScrollRestoration
 } from "remix";
 import type { MetaFunction } from "remix";
-import stylesUrl from './styles/global.css';
+import stylesUrl from './styles/css/global.css';
 
 export const meta: MetaFunction = () => {
   return { title: "This is a test", description: "this is a test" };
 };
 
-export let links: LinksFunction = () => {
+export const links: LinksFunction = () => {
   return [{rel:'stylesheet', href: stylesUrl}];
-}
+};
 
 export default function App() {
   return (
